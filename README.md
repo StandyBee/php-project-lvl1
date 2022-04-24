@@ -2,3 +2,4 @@
 [![Actions Status](https://github.com/StandyBee/php-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/StandyBee/php-project-lvl1/actions)
 [![Greet everyone](https://github.com/StandyBee/php-project-lvl1/actions/workflows/workflow.yml/badge.svg)](https://github.com/StandyBee/php-project-lvl1/actions/workflows/workflow.yml)
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
+//Ссылка на аксинему игры brain-event https://asciinema.org/connect/682b3772-2ca7-42b8-be52-b2fbdf1d9574
