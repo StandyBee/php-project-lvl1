@@ -39,7 +39,7 @@ function Iseven()
 		return false;
 	} 
 }
-function proverka()
+function IsevenRepeat()
 {	
 	global $name;
 	if (Iseven() === true) {
@@ -48,4 +48,4 @@ function proverka()
 	return false;
 	}	
 }
-proverka();
+IsevenRepeat();
