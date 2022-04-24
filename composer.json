@@ -1,7 +1,10 @@
 {
     "name": "hexlet/code",
-    "bin": ["/bin/brain-games"],
+    "bin": ["bin/brain-games"],
     "autoload": {
+	"psr-4": {
+            "Hexlet\\Code\\": "src/"
+	},
         "files": [
 		"src/Cli.php"
 	]
