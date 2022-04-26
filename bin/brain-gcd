@@ -1,0 +1,54 @@
+#!/usr/bin/php
+<?php
+
+namespace Brain\Games\Cli;
+
+$autoloadPath1 = __DIR__ . '/../../../autoload.php';
+$autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
+if (file_exists($autoloadPath1)) {
+    require_once $autoloadPath1;
+} else {
+    require_once $autoloadPath2;
+}
+use function cli\line;
+use function cli\prompt;
+line('Welcome to the Brain Game!');
+$name = prompt('May I have your name?');
+line("Hello, %s!", $name);
+line('Find the greatest common divisor of given numbers.');
+function gcd($a, $b)
+{
+    if ($a == 0 || $b == 0)
+        return abs( max(abs($a), abs($b)) );
+
+    $r = $a % $b;
+    return ($r != 0) ? gcd($b, $r) : abs($b);
+}
+function gameGcd()
+{
+	global $name;
+	$num1 = rand(0, 99);
+	$num2 = rand(0, 99);
+	$resGcd = gcd($num1, $num2);
+	line("Question: $num1 $num2");
+	$answer = prompt('Your answer: ');
+	if ($answer == $resGcd) {
+	line('Correct!');
+        return true;
+	} else {
+	line ("'%s' is wrong answer ;(. Correct answer was $resGcd", $answer);
+        line("Let's try again, %s!", $name);
+        return false;
+	}
+}
+function gameRepeat()
+{
+        global $name;
+        if (gameGcd() === true) {
+        gameGcd() === true ? (gameGcd() === true ? line("Congratulations, %s!", $name) : false) : false;
+        } else {
+        return false;
+        }
+}
+gameRepeat();
+
