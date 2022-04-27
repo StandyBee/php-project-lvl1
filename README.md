@@ -10,3 +10,5 @@
 //Аксинема игры brain-gcd https://asciinema.org/a/490184 <br>
 
 //Аксинема игры brain-progression https://asciinema.org/a/490401 <br>
+
+//Аксинема игры brain-prime https://asciinema.org/a/490418 <br>
