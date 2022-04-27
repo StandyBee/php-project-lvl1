@@ -8,3 +8,5 @@
 //Аксинема игры brain-calc https://asciinema.org/a/490162  <br>
 
 //Аксинема игры brain-gcd https://asciinema.org/a/490184 <br>
+
+//Аксинема игры brain-progression https://asciinema.org/a/490401 <br>

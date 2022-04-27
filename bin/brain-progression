@@ -1,0 +1,59 @@
+#!/usr/bin/php
+<?php
+namespace Brain\Games\Cli;
+
+$autoloadPath1 = __DIR__ . '/../../../autoload.php';
+$autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
+if (file_exists($autoloadPath1)) {
+    require_once $autoloadPath1;
+} else {
+    require_once $autoloadPath2;
+}
+use function cli\line;
+use function cli\prompt;
+line('Welcome to the Brain Game!');
+$name = prompt('May I have your name?');
+line("Hello, %s!", $name);
+line('What number is missing in the progression?');
+function gameProgression()
+{
+    global $name;	
+    $arr = [];
+    $firstItem = rand(0,20);
+    $prStep = rand(1,10);
+    $secondItem = $firstItem + $prStep;
+    $count = 0;
+    $arrayLen = rand(5, 10);
+    for ($i = 0; $i < $arrayLen; $i++) {
+        $arr[$i] = $count + $secondItem;
+        $count += $prStep;
+    }
+    $randIndex = rand(0, count($arr) - 1);
+    $arr[$randIndex] = '..';
+    line("Question: " . implode(' ', $arr));
+    $res = array_search('..', $arr, true);
+    	if ($arr[0] == '..') {
+    		$prevArr = $arr[$res+1] - $prStep;
+	} else {
+		$prevArr = $arr[$res-1] + $prStep;
+	}
+	$answer = prompt('Your answer');    
+	if ($answer == $prevArr) {
+		line('Correct!');
+                return true;
+	} else {
+	line("'%s'is wrong answer ;(. Correct answer was $prevArr", $answer);
+        line("Let's try again, %s!", $name);
+	return false;
+	}
+}
+function gameRepeat()
+{
+        global $name;
+        if (gameProgression() === true) {
+        gameProgression() === true ? (gameProgression() === true ? line("Congratulations, %s!", $name) : false) : false;
+        } else {
+        return false;
+	}
+}
+gameRepeat();
