@@ -9,8 +9,8 @@ if (file_exists($autoloadPath1)) {
 } else {
     require_once $autoloadPath2;
 }
-use function cli\line;
-use function cli\prompt;
+use function Cli\line;
+use function Cli\prompt;
 line('Welcome to the Brain Game!');
 $name = prompt('May I have your name?');
 line("Hello, %s!", $name);
@@ -34,7 +34,7 @@ function gameIsPrime()
         global $name;
         $num = rand(0,199);
         line("Question: %s", $num);
-        $answer = prompt('Your answer: ');
+        $answer = prompt('Your answer');
 	if (isPrime($num) === true && $answer === 'yes') {
 	     line('Correct!');
 	     return true;

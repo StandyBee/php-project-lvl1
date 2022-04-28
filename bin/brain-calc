@@ -28,7 +28,7 @@ function gameCalc()
     $dif = $num - $num2;
     $mult = $num * $num2;
     line("Question: %s", $num . $randomSing . $num2);
-    $answer = prompt('Your answer: ');
+    $answer = prompt('Your answer');
 
     if ($randomSing === '+' && $answer == $sum) {
         line('Correct!');
