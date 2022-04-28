@@ -13,8 +13,7 @@
             "Hexlet\\Code\\": "src/"
 	},
         "files": [
-		"src/Cli.php",
-		"src/Games/barin-games"
+		"src/Cli.php"
 	]
     },
     "authors": [
