@@ -14,7 +14,7 @@
 	},
         "files": [
 		"src/Cli.php"
-	]
+ 	]
     },
     "authors": [
         {
