@@ -12,9 +12,9 @@ function runGame()
     $correctAnswer = [];
     $question = [];
     for ($i = 0; $i <= ROUNDS_COUNT; $i++) {
-	$num = rand(0, 99);
-	$question[] = $num;
-	$correctAnswer[] = isEven($num) ? 'yes' : 'no';
+        $num = rand(0, 99);
+        $question[] = $num;
+        $correctAnswer[] = isEven($num) ? 'yes' : 'no';
     }
     $answerPair = [$question, $correctAnswer];
     return (startGame(GAME_TASK, $answerPair));
@@ -23,7 +23,7 @@ function runGame()
 function isEven($num)
 {
     if ($num % 2 === 0) {
-	return true;
+        return true;
     }
-	return false;
+        return false;
 }

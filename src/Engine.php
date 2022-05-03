@@ -19,11 +19,11 @@ function startGame($task, $answerPair)
         $answer = prompt('Your answer');
         if ($correctAnswer[$i] == $answer) {
             line('Correct!');
-            } else {
+        } else {
             line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer[$i]}'");
             line("Let's try again, $name!");
             return;
-            }
+        }
     }
     line("Congratulations, $name!");
 }

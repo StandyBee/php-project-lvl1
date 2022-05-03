@@ -12,9 +12,9 @@ function runGame()
     $correctAnswer = [];
     $question = [];
     for ($i = 0; $i <= ROUNDS_COUNT; $i++) {
-	$num = rand(0, 199);
-	$question[] = $num;
-	$correctAnswer[] = isPrime($num) ? 'yes' : 'no';
+        $num = rand(0, 199);
+        $question[] = $num;
+        $correctAnswer[] = isPrime($num) ? 'yes' : 'no';
     }
     $answerPair = [$question, $correctAnswer];
     return (startGame(GAME_TASK, $answerPair));
@@ -22,12 +22,12 @@ function runGame()
 function isPrime($num)
 {
     if ($num == 0) {
-	return false;
+        return false;
     }
     for ($i = 2; $i < $num; $i++) {
-	if ($num % $i == 0) {
-	    return false;
-	}
+        if ($num % $i == 0) {
+            return false;
+        }
     }
     return true;
 }
