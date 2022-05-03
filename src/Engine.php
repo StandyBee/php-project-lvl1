@@ -13,17 +13,17 @@ function startGame($task, $answerPair)
     line("Hello, %s!", $name);
     line($task);
     for ($i = 1; $i <= ROUNDS_COUNT; $i++) {
-    $question = $answerPair[0];
-    $correctAnswer = $answerPair[1];
-    line('Question: ' . $question[$i]);
-    $answer = prompt('Your answer');
-    if ($correctAnswer[$i] == $answer) {
-	line('Correct!');
-    } else {
-	line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer[$i]}'");
-	line("Let's try again, $name!");
-	return;
-      }
+        $question = $answerPair[0];
+        $correctAnswer = $answerPair[1];
+        line('Question: ' . $question[$i]);
+        $answer = prompt('Your answer');
+        if ($correctAnswer[$i] == $answer) {
+            line('Correct!');
+            } else {
+            line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer[$i]}'");
+            line("Let's try again, $name!");
+            return;
+            }
     }
     line("Congratulations, $name!");
 }
