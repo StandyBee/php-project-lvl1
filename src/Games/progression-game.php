@@ -1,7 +1,9 @@
 <?php
 
 namespace Project\Games\progression;
+
 use function Project\Engine\startGame;
+
 use const Project\Engine\ROUNDS_COUNT;
 
 const GAME_TASK = ('What number is missing in the progression?');

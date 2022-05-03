@@ -26,7 +26,7 @@ function runGame()
 function calculate($num, $num2, $randomSign)
 {
     if ($randomSign == '+') {
-	return ($num + $num2);
+        return ($num + $num2);
     } elseif ($randomSign == '-') {
         return ($num - $num2);
     } elseif ($randomSign == '*') {
