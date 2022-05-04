@@ -17,7 +17,7 @@ function runGame()
         $randomSign = $sign[$j];
         $num = rand(0, 99);
         $num2 = rand(0, 99);
-        $question[] = $num . $randomSign . $num2;
+        $question[] = $num . ' ' . $randomSign . ' ' . $num2;
         $correctAnswer[] = calculate($num, $num2, $randomSign);
     }
     $answerPair = [$question, $correctAnswer];
