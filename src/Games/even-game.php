@@ -20,7 +20,7 @@ function runGame()
     return (startGame(GAME_TASK, $answerPair));
 }
 
-function isEven($num)
+function isEven(int $num)
 {
     if ($num % 2 === 0) {
         return true;

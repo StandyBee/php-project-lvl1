@@ -19,7 +19,7 @@ function runGame()
     $answerPair = [$question, $correctAnswer];
     return (startGame(GAME_TASK, $answerPair));
 }
-function isPrime($num)
+function isPrime(int $num)
 {
     if ($num == 0) {
         return false;

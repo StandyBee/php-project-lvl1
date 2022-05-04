@@ -23,7 +23,7 @@ function runGame()
     $answerPair = [$question, $correctAnswer];
     return (startGame(GAME_TASK, $answerPair));
 }
-function calculate($num, $num2, $randomSign)
+function calculate(int $num, int $num2, int $randomSign)
 {
     if ($randomSign == '+') {
         return ($num + $num2);

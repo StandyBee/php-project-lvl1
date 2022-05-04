@@ -21,7 +21,7 @@ function runGame()
     $answerPair = [$question, $correctAnswer];
     return (startGame(GAME_TASK, $answerPair));
 }
-function findGcd($num, $num2)
+function findGcd(int $num, int $num2)
 {
     if ($num == 0 || $num2 == 0) {
         return abs(max(abs($num), abs($num2)));
