@@ -23,7 +23,7 @@ make brain-even
 ```
 
 #### Gameplay 
-<p><a href="https://asciinema.org/a/489660">Asciinema</a> brain-even</p><br>
+[![asciicast](https://asciinema.org/a/489660.svg)](https://asciinema.org/a/489660)
 
 ### Calc Game
 Calculate the result of the expression
@@ -33,7 +33,7 @@ Calculate the result of the expression
 make brain-calc
 ```
 #### Gameplay
-<p><a href="https://asciinema.org/a/490162">Asciinema</a> brain-calc</p><br>
+[![asciicast](https://asciinema.org/a/490162.svg)](https://asciinema.org/a/490162)
 
 ### GCD Game
 Find the greatest common divisor of two numbers
@@ -43,7 +43,7 @@ Find the greatest common divisor of two numbers
 make brain-gcd
 ```
 #### Gameplay
-<p><a href="https://asciinema.org/a/490184"Asciinema</a> brain-gcd</p><br>
+[![asciicast](https://asciinema.org/a/490184.svg)](https://asciinema.org/a/490184)
 
 ### Progression Game
 Find the missing number in progression
@@ -53,7 +53,7 @@ Find the missing number in progression
 make brain-progression
 ```
 #### Gameplay
-<p><a href="https://asciinema.org/a/490401">Asciinema</a> brain-progression</p><br>
+[![asciicast](https://asciinema.org/a/490401.svg)](https://asciinema.org/a/490401)
 
 ### Prime Game
 Answer if the number is prime
@@ -63,7 +63,7 @@ Answer if the number is prime
 make brain-prime
 ```
 #### Gameplay
-<p><a href="https://asciinema.org/a/490418">Asciinema</a> brain-prime</p><br>
+[![asciicast](https://asciinema.org/a/490418.svg)](https://asciinema.org/a/490418)
 
 
 
