@@ -33,7 +33,7 @@ function makeProgression()
     $arrayLen = rand(5, 10);
     for ($i = 0; $i < $arrayLen; $i++) {
         $result[$i] = $count + $secondItem;
-        $count += $prStep;
+        $count = $count + $prStep;
     }
     return $result;
 }
