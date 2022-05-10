@@ -1,22 +1,22 @@
 {
     "name": "hexlet/code",
     "bin": [
-	    "bin/brain-games",
-            "bin/brain-even",
-	    "bin/brain-calc",
-	    "bin/brain-gcd",
-	    "bin/brain-progression",
-	    "bin/brain-prime"
+	"bin/brain-games",
+        "bin/brain-even",
+	"bin/brain-calc",
+	"bin/brain-gcd",
+	"bin/brain-progression",
+	"bin/brain-prime"
     ],
     "autoload": {
         "files": [
-		"src/Cli.php",
-		"src/Engine.php",
-		"src/Games/EvenGame.php",
-		"src/Games/CalcGame.php",
-		"src/Games/GcdGame.php",
-		"src/Games/PrimeGame.php",
-		"src/Games/ProgressionGame.php"
+	    "src/Cli.php",
+	    "src/Engine.php",
+	    "src/Games/EvenGame.php",
+	    "src/Games/CalcGame.php",
+	    "src/Games/GcdGame.php",
+	    "src/Games/PrimeGame.php",
+	    "src/Games/ProgressionGame.php"
  	]
     },
     "authors": [
