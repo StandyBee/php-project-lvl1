@@ -16,8 +16,8 @@ function runGame()
         $question[] = $num;
         $correctAnswer[] = isPrime($num) ? 'yes' : 'no';
     }
-    $answerPair = [$question, $correctAnswer];
-    return (startGame(GAME_TASK, $answerPair));
+    $pairQuestionAnswer = ['question' => $question, 'answer' => $correctAnswer];
+    return (startGame(GAME_TASK, $pairQuestionAnswer));
 }
 function isPrime(int $num)
 {

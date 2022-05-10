@@ -20,8 +20,8 @@ function runGame()
         $question[] = $numberProgression;
         $correctAnswer[] = $valueRand;
     }
-    $answerPair = [$question, $correctAnswer];
-    return (startGame(GAME_TASK, $answerPair));
+    $pairQuestionAnswer = ['question' => $question, 'answer' => $correctAnswer];
+    return (startGame(GAME_TASK, $pairQuestionAnswer));
 }
 function makeProgression()
 {

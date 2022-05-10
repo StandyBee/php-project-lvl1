@@ -18,8 +18,8 @@ function runGame()
         $result = findGcd($num, $num2);
         $correctAnswer[] = $result;
     }
-    $answerPair = [$question, $correctAnswer];
-    return (startGame(GAME_TASK, $answerPair));
+    $pairQuestionAnswer = ['question' => $question, 'answer' => $correctAnswer];
+    return (startGame(GAME_TASK, $pairQuestionAnswer));
 }
 function findGcd(int $num, int $num2)
 {

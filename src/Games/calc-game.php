@@ -20,8 +20,8 @@ function runGame()
         $question[] = $num . ' ' . $randomSign . ' ' . $num2;
         $correctAnswer[] = calculate($num, $num2, $randomSign);
     }
-    $answerPair = [$question, $correctAnswer];
-    return (startGame(GAME_TASK, $answerPair));
+    $pairQuestionAnswer = ['question' => $question, 'answer' => $correctAnswer];
+    return (startGame(GAME_TASK, $pairQuestionAnswer));
 }
 function calculate(int $num, int $num2, string $randomSign)
 {
