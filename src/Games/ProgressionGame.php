@@ -6,7 +6,8 @@ use function Project\Engine\startGame;
 
 use const Project\Engine\ROUNDS_COUNT;
 
-const GAME_TASK = ('What number is missing in the progression?');
+const GAME_TASK = 'What number is missing in the progression?';
+
 function runGame()
 {
     $correctAnswer = [];
@@ -21,19 +22,20 @@ function runGame()
         $correctAnswer[] = $valueRand;
     }
     $pairQuestionAnswer = ['question' => $question, 'answer' => $correctAnswer];
-    return (startGame(GAME_TASK, $pairQuestionAnswer));
+    return startGame(GAME_TASK, $pairQuestionAnswer);
 }
+
 function makeProgression()
 {
     $result = [];
     $firstItem = rand(0, 20);
-    $prStep = rand(1, 10);
-    $secondItem = $firstItem + $prStep;
+    $progressionStep = rand(1, 10);
+    $secondItem = $firstItem + $progressionStep;
     $count = 0;
-    $arrayLen = rand(5, 10);
-    for ($i = 0; $i < $arrayLen; $i++) {
+    $arrayLength = rand(5, 10);
+    for ($i = 0; $i < $arrayLength; $i++) {
         $result[$i] = $count + $secondItem;
-        $count = $count + $prStep;
+        $count = $count + $progressionStep;
     }
     return $result;
 }

@@ -6,7 +6,8 @@ use function Project\Engine\startGame;
 
 use const Project\Engine\ROUNDS_COUNT;
 
-const GAME_TASK = ('Answer "yes" if the number is prime, otherwise answer "no".');
+const GAME_TASK = 'Answer "yes" if the number is prime, otherwise answer "no".';
+
 function runGame()
 {
     $correctAnswer = [];
@@ -17,8 +18,9 @@ function runGame()
         $correctAnswer[] = isPrime($num) ? 'yes' : 'no';
     }
     $pairQuestionAnswer = ['question' => $question, 'answer' => $correctAnswer];
-    return (startGame(GAME_TASK, $pairQuestionAnswer));
+    return startGame(GAME_TASK, $pairQuestionAnswer);
 }
+
 function isPrime(int $num)
 {
     if ($num == 0) {

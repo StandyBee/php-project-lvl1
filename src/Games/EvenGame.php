@@ -6,7 +6,8 @@ use function Project\Engine\startGame;
 
 use const Project\Engine\ROUNDS_COUNT;
 
-const GAME_TASK = ('Answer "yes" if the number is even, otherwise answer "no".');
+const GAME_TASK = 'Answer "yes" if the number is even, otherwise answer "no".';
+
 function runGame()
 {
     $correctAnswer = [];
@@ -17,13 +18,10 @@ function runGame()
         $correctAnswer[] = isEven($num) ? 'yes' : 'no';
     }
     $pairQuestionAnswer = ['question' => $question, 'answer' => $correctAnswer];
-    return (startGame(GAME_TASK, $pairQuestionAnswer));
+    return startGame(GAME_TASK, $pairQuestionAnswer);
 }
 
 function isEven(int $num)
 {
-    if ($num % 2 === 0) {
-        return true;
-    }
-        return false;
+    return $num % 2 === 0;
 }
