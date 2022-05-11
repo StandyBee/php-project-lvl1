@@ -35,7 +35,7 @@ function makeProgression()
     $arrayLength = rand(5, 10);
     for ($i = 0; $i < $arrayLength; $i++) {
         $result[$i] = $count + $secondItem;
-        $count = $count + $progressionStep;
+        $count += $progressionStep;
     }
     return $result;
 }
