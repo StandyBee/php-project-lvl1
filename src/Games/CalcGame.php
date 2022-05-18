@@ -6,22 +6,22 @@ use function Project\Engine\startGame;
 
 use const Project\Engine\ROUNDS_COUNT;
 
-const GAME_TASK = 'What is the result of the expression?';
+const GAME_DESCRIPTION = 'What is the result of the expression?';
 
 function runGame()
 {
-    $correctAnswer = [];
-    $question = [];
+    $correctAnswers = [];
+    $questions = [];
     for ($i = 0; $i <= ROUNDS_COUNT; $i++) {
-        $sign = ['+', '-', '*'];
-        $randomSign = $sign[array_rand($sign)];
+        $signs = ['+', '-', '*'];
+        $randomSign = $signs[array_rand($signs)];
         $num = rand(0, 99);
         $num2 = rand(0, 99);
-        $question[] = "{$num} {$randomSign} {$num2}";
-        $correctAnswer[] = calculate($num, $num2, $randomSign);
+        $questions[] = "{$num} {$randomSign} {$num2}";
+        $correctAnswers[] = calculate($num, $num2, $randomSign);
     }
-    $pairQuestionAnswer = ['question' => $question, 'answer' => $correctAnswer];
-    return startGame(GAME_TASK, $pairQuestionAnswer);
+    $roundData = ['questions' => $questions, 'answers' => $correctAnswers];
+    return startGame(GAME_DESCRIPTION, $roundData);
 }
 
 function calculate(int $num, int $num2, string $randomSign)
@@ -33,5 +33,7 @@ function calculate(int $num, int $num2, string $randomSign)
             return $num - $num2;
         case "*":
             return $num * $num2;
+        default:
+            return "Incorrect sign: '{$randomSign}'";
     }
 }

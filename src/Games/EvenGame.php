@@ -6,19 +6,19 @@ use function Project\Engine\startGame;
 
 use const Project\Engine\ROUNDS_COUNT;
 
-const GAME_TASK = 'Answer "yes" if the number is even, otherwise answer "no".';
+const GAME_DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 function runGame()
 {
-    $correctAnswer = [];
-    $question = [];
+    $correctAnswers = [];
+    $questions = [];
     for ($i = 0; $i <= ROUNDS_COUNT; $i++) {
         $num = rand(0, 99);
-        $question[] = $num;
-        $correctAnswer[] = isEven($num) ? 'yes' : 'no';
+        $questions[] = $num;
+        $correctAnswers[] = isEven($num) ? 'yes' : 'no';
     }
-    $pairQuestionAnswer = ['question' => $question, 'answer' => $correctAnswer];
-    return startGame(GAME_TASK, $pairQuestionAnswer);
+    $roundData = ['questions' => $questions, 'answers' => $correctAnswers];
+    return startGame(GAME_DESCRIPTION, $roundData);
 }
 
 function isEven(int $num)

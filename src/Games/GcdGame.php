@@ -6,21 +6,21 @@ use function Project\Engine\startGame;
 
 use const Project\Engine\ROUNDS_COUNT;
 
-const GAME_TASK = 'Find the greatest common divisor of given numbers.';
+const GAME_DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 
 function runGame()
 {
-    $correctAnswer = [];
-    $question = [];
+    $correctAnswers = [];
+    $questions = [];
     for ($i = 0; $i <= ROUNDS_COUNT; $i++) {
         $num = rand(0, 99);
         $num2 = rand(0, 99);
-        $question[] = "{$num} {$num2}";
+        $questions[] = "{$num} {$num2}";
         $result = findGcd($num, $num2);
-        $correctAnswer[] = $result;
+        $correctAnswers[] = $result;
     }
-    $pairQuestionAnswer = ['question' => $question, 'answer' => $correctAnswer];
-    return startGame(GAME_TASK, $pairQuestionAnswer);
+    $roundData = ['questions' => $questions, 'answers' => $correctAnswers];
+    return startGame(GAME_DESCRIPTION, $roundData);
 }
 
 function findGcd(int $num, int $num2)

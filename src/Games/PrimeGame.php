@@ -6,24 +6,24 @@ use function Project\Engine\startGame;
 
 use const Project\Engine\ROUNDS_COUNT;
 
-const GAME_TASK = 'Answer "yes" if the number is prime, otherwise answer "no".';
+const GAME_DESCRIPTION = 'Answer "yes" if the number is prime, otherwise answer "no".';
 
 function runGame()
 {
-    $correctAnswer = [];
-    $question = [];
+    $correctAnswers = [];
+    $questions = [];
     for ($i = 0; $i <= ROUNDS_COUNT; $i++) {
         $num = rand(0, 199);
-        $question[] = $num;
-        $correctAnswer[] = isPrime($num) ? 'yes' : 'no';
+        $questions[] = $num;
+        $correctAnswers[] = isPrime($num) ? 'yes' : 'no';
     }
-    $pairQuestionAnswer = ['question' => $question, 'answer' => $correctAnswer];
-    return startGame(GAME_TASK, $pairQuestionAnswer);
+    $roundData = ['questions' => $questions, 'answers' => $correctAnswers];
+    return startGame(GAME_DESCRIPTION, $roundData);
 }
 
 function isPrime(int $num)
 {
-    if ($num == 0) {
+    if ($num <= 1) {
         return false;
     }
     for ($i = 2; $i < $num; $i++) {
