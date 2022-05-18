@@ -15,7 +15,7 @@ function startGame(string $task, array $roundData)
     for ($i = 1; $i <= ROUNDS_COUNT; $i++) {
         $questions = $roundData['questions'];
         $correctAnswers = $roundData['answers'];
-        line("Question:'{$questions[$i]}'");
+        line("Question: {$questions[$i]}");
         $answer = prompt('Your answer');
         if ($correctAnswers[$i] == $answer) {
             line('Correct!');
