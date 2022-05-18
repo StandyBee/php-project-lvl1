@@ -15,11 +15,10 @@ function runGame()
     for ($i = 0; $i <= ROUNDS_COUNT; $i++) {
         $progression = makeProgression();
         $numbers = implode(' ', $progression);
-        $randProgression = array_rand($progression);
-        $valueRand = $progression[$randProgression];
-        $numberProgression = str_replace([$valueRand], '..', $numbers);
-        $questions[] = $numberProgression;
-        $correctAnswers[] = $valueRand;
+        $randomItemOfProgression = $progression[array_rand($progression)];
+        $missedItem = str_replace([$randomItemOfProgression], '..', $numbers);
+        $questions[] = $missedItem;
+        $correctAnswers[] = $randomItemOfProgression;
     }
     $roundData = ['questions' => $questions, 'answers' => $correctAnswers];
     return startGame(GAME_DESCRIPTION, $roundData);
@@ -30,12 +29,9 @@ function makeProgression()
     $result = [];
     $firstItem = rand(0, 20);
     $progressionStep = rand(1, 10);
-    $secondItem = $firstItem + $progressionStep;
-    $count = 0;
     $progressionLength = rand(5, 10);
     for ($i = 0; $i < $progressionLength; $i++) {
-        $result[$i] = $count + $secondItem;
-        $count = $count + $progressionStep;
+        $result[] = $firstItem + $progressionStep * $i;
     }
     return $result;
 }
